@@ -1,7 +1,21 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Keep pg and bcryptjs out of the browser/edge bundle — Node.js only
+  serverExternalPackages: ['pg', 'pg-pool', 'bcryptjs', 'nodemailer'],
 
-export default nextConfig;
+  webpack(config) {
+    // Suppress the optional pg-native warning
+    config.resolve.fallback = { ...config.resolve.fallback, 'pg-native': false }
+    return config
+  },
+
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: '**.supabase.co' },
+    ],
+  },
+}
+
+export default nextConfig
