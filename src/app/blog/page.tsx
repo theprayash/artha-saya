@@ -56,21 +56,21 @@ export default async function BlogPage({ searchParams }: Props) {
   return (
     <>
       <SiteHeader />
-      <main className="max-w-6xl mx-auto px-5 py-16">
+      <main className="max-w-6xl mx-auto px-5 py-10 md:py-16">
 
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-8 md:mb-12">
           <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: 'var(--text-faint)' }}>
             Artha Sage · नेपाल सेयर बजार
           </p>
-          <h1 className="font-display font-black text-5xl md:text-6xl mb-4" style={{ color: 'var(--text)' }}>Blog</h1>
-          <p className="text-lg max-w-xl" style={{ color: 'var(--text-muted)' }}>
+          <h1 className="font-display font-black text-4xl md:text-6xl mb-3 md:mb-4" style={{ color: 'var(--text)' }}>Blog</h1>
+          <p className="text-base md:text-lg max-w-xl" style={{ color: 'var(--text-muted)' }}>
             Share market insights, IPO analysis, stock education, and honest commentary — all free.
           </p>
         </div>
 
         {/* Category filter */}
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap gap-2 mb-8 md:mb-10">
           {CATEGORIES.map(cat => {
             const isActive = cat.id === 'all' ? !activeCategory : activeCategory === cat.id
             const count = cat.id === 'all' ? allPosts.length : allPosts.filter(p => p.category === cat.id).length

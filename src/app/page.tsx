@@ -43,13 +43,13 @@ export default async function HomePage() {
       <main>
 
         {/* ── Hero ── */}
-        <section className="relative max-w-6xl mx-auto px-5 pt-20 pb-16">
+        <section className="relative max-w-6xl mx-auto px-5 pt-14 pb-10 md:pt-20 md:pb-16">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
           <div className="relative text-center max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-xs font-mono mb-6">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-xs font-mono mb-5 md:mb-6">
               <Zap size={11} /> Share Market · Artha Sage
             </span>
-            <h1 className="font-display font-black text-5xl md:text-7xl leading-[1.05] tracking-tight mb-6" style={{ color: 'var(--text)' }}>
+            <h1 className="font-display font-black text-4xl sm:text-5xl md:text-7xl leading-[1.05] tracking-tight mb-5 md:mb-6" style={{ color: 'var(--text)' }}>
               Invest with{' '}
               <span className="text-accent">clarity.</span>
             </h1>
@@ -95,8 +95,8 @@ export default async function HomePage() {
         )}
 
         {/* ── Latest posts ── */}
-        <section className="max-w-6xl mx-auto px-5 py-20">
-          <div className="flex items-center justify-between mb-10">
+        <section className="max-w-6xl mx-auto px-5 py-12 md:py-20">
+          <div className="flex items-center justify-between mb-8 md:mb-10">
             <div>
               <p className="text-xs font-mono uppercase tracking-widest mb-1" style={{ color: 'var(--text-faint)' }}>Latest</p>
               <h2 className="font-display font-black text-3xl" style={{ color: 'var(--text)' }}>From the blog</h2>
@@ -117,7 +117,7 @@ export default async function HomePage() {
               {featured && (
                 <Link
                   href={`/blog/${featured.slug}`}
-                  className="md:col-span-2 group relative rounded-2xl p-8 hover:border-[var(--border2)] transition-colors overflow-hidden"
+                  className="md:col-span-2 group relative rounded-2xl p-5 md:p-8 hover:border-[var(--border2)] transition-colors overflow-hidden"
                   style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
                 >
                   <div className="absolute top-0 right-0 w-48 h-48 bg-accent/3 rounded-full blur-3xl pointer-events-none" />
@@ -171,7 +171,7 @@ export default async function HomePage() {
         </section>
 
         {/* ── Why Artha Sage ── */}
-        <section className="border-t py-20" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
+        <section className="border-t py-12 md:py-20" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
           <div className="max-w-6xl mx-auto px-5">
             <div className="text-center mb-12">
               <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: 'var(--text-faint)' }}>Why us</p>
@@ -208,8 +208,8 @@ export default async function HomePage() {
         </section>
 
         {/* ── Newsletter ── */}
-        <section className="max-w-6xl mx-auto px-5 py-20">
-          <div className="rounded-2xl p-10 text-center max-w-2xl mx-auto" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+        <section className="max-w-6xl mx-auto px-5 py-12 md:py-20">
+          <div className="rounded-2xl p-6 md:p-10 text-center max-w-2xl mx-auto" style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
             <p className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: 'var(--text-faint)' }}>Weekly digest</p>
             <h2 className="font-display font-black text-3xl mb-3" style={{ color: 'var(--text)' }}>
               Market insights in your inbox

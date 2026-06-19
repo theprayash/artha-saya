@@ -10,9 +10,9 @@ export default function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mt-24 border-t" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
-      <div className="max-w-6xl mx-auto px-6 py-14">
-        <div className="flex flex-col md:flex-row justify-between gap-10">
+    <footer className="mt-16 md:mt-24 border-t" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
+      <div className="max-w-6xl mx-auto px-5 py-10 md:py-14">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10">
 
           {/* Brand */}
           <div className="max-w-xs">

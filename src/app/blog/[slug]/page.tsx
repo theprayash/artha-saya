@@ -101,23 +101,23 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SiteHeader />
-      <main className="max-w-3xl mx-auto px-5 py-16">
+      <main className="max-w-3xl mx-auto px-5 py-10 md:py-16">
 
         {/* Back */}
         <Link
           href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm transition-colors hover:text-accent mb-10"
+          className="inline-flex items-center gap-1.5 text-sm transition-colors hover:text-accent mb-7 md:mb-10"
           style={{ color: 'var(--text-faint)' }}
         >
           <ArrowLeft size={14} /> Back to blog
         </Link>
 
         {/* Meta */}
-        <div className="mb-8">
-          <span className={`inline-block text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border mb-4 ${color}`}>
+        <div className="mb-6 md:mb-8">
+          <span className={`inline-block text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border mb-3 md:mb-4 ${color}`}>
             {post.category}
           </span>
-          <h1 className="font-display font-black text-4xl md:text-5xl leading-tight mb-4" style={{ color: 'var(--text)' }}>
+          <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl leading-tight mb-3 md:mb-4" style={{ color: 'var(--text)' }}>
             {post.title}
           </h1>
           {post.excerpt && (

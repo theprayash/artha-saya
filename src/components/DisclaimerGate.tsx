@@ -28,7 +28,7 @@ export default function DisclaimerGate({ children }: { children: React.ReactNode
           style={{ background: 'color-mix(in srgb, var(--bg) 60%, #000 40%)' }}
         >
           <div
-            className="max-w-lg w-full rounded-2xl p-8"
+            className="max-w-lg w-full rounded-2xl p-5 sm:p-8"
             style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
           >
             {/* Header */}

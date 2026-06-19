@@ -46,10 +46,10 @@ export default function TermsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="max-w-3xl mx-auto px-5 py-16">
+      <main className="max-w-3xl mx-auto px-5 py-10 md:py-16">
 
         {/* Header */}
-        <div className="flex items-start gap-4 mb-12">
+        <div className="flex items-start gap-3 md:gap-4 mb-8 md:mb-12">
           <div
             className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 mt-1"
             style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.2)' }}

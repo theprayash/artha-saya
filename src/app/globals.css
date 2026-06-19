@@ -24,17 +24,23 @@
 }
 
 /* ── Base ────────────────────────────────────────────── */
+html { overflow-x: hidden; }
+
 body {
   background: var(--bg);
   color: var(--text);
   transition: background 0.2s, color 0.2s;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
-* { border-color: var(--border); }
+* { border-color: var(--border); box-sizing: border-box; }
 
 ::selection { background: #C8A756; color: #103959; }
 
 /* ── Prose (blog post content) ───────────────────────── */
+.prose-blog { font-size: clamp(0.95rem, 2.5vw, 1.05rem); }
+
 .prose-blog h1, .prose-blog h2, .prose-blog h3,
 .prose-blog h4, .prose-blog h5, .prose-blog h6 {
   font-family: var(--font-display);
@@ -42,19 +48,44 @@ body {
   color: var(--text);
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  line-height: 1.2;
+  line-height: 1.25;
+  word-break: break-word;
 }
-.prose-blog p   { color: var(--text-muted); line-height: 1.8; margin-bottom: 1em; }
-.prose-blog a   { color: #C8A756; text-decoration: none; }
+.prose-blog h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+.prose-blog h2 { font-size: clamp(1.3rem, 4vw, 1.7rem); }
+.prose-blog h3 { font-size: clamp(1.1rem, 3vw, 1.35rem); }
+.prose-blog h4, .prose-blog h5, .prose-blog h6 { font-size: 1rem; }
+
+.prose-blog p   { color: var(--text-muted); line-height: 1.8; margin-bottom: 1em; word-break: break-word; }
+.prose-blog a   { color: #C8A756; text-decoration: none; word-break: break-all; }
 .prose-blog a:hover { text-decoration: underline; }
 .prose-blog strong { color: var(--text); }
+
 .prose-blog code {
   font-family: var(--font-mono);
-  font-size: 0.85em;
+  font-size: 0.82em;
   background: rgba(200,167,86,0.1);
   color: #C8A756;
   padding: 0.15em 0.4em;
   border-radius: 4px;
+  word-break: break-all;
+}
+.prose-blog pre {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5em 0;
+  -webkit-overflow-scrolling: touch;
+}
+.prose-blog pre code {
+  background: none;
+  color: #C8A756;
+  padding: 0;
+  font-size: 0.85em;
+  word-break: normal;
+  white-space: pre;
 }
 .prose-blog blockquote {
   border-left: 3px solid #C8A756;
@@ -70,7 +101,42 @@ body {
 }
 .prose-blog li { margin-bottom: 0.4em; }
 .prose-blog hr { border-color: var(--border); margin: 2em 0; }
-.prose-blog iframe { max-width: 100%; border-radius: 8px; }
+
+.prose-blog img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5em 0;
+  display: block;
+}
+
+/* YouTube / iframe embeds */
+.prose-blog iframe {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 1.5em 0;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* Tables */
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+}
+.prose-blog th, .prose-blog td {
+  padding: 0.6em 0.9em;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.prose-blog th { background: var(--surface2); color: var(--text); font-weight: 700; }
 
 /* ── Tiptap editor ───────────────────────────────────── */
 .ProseMirror {
