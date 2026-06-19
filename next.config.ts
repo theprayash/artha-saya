@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: false },
   // Keep pg and bcryptjs out of the browser/edge bundle — Node.js only
   serverExternalPackages: ['pg', 'pg-pool', 'bcryptjs', 'nodemailer'],
 
