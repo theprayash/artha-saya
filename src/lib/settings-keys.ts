@@ -11,7 +11,7 @@ export const SETTING_KEYS = [
 export type SettingKey = typeof SETTING_KEYS[number]
 
 export const SETTING_DEFAULTS: Record<SettingKey, string> = {
-  site_name: 'Artha Saya',
+  site_name: 'Artha Sage',
   site_tagline: 'Share market insights explained simply.',
   contact_email: '',
   author_name: '',

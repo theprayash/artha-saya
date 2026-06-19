@@ -47,7 +47,7 @@ export default async function HomePage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[280px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
           <div className="relative text-center max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 text-accent text-xs font-mono mb-6">
-              <Zap size={11} /> Share Market · Artha Saya
+              <Zap size={11} /> Share Market · Artha Sage
             </span>
             <h1 className="font-display font-black text-5xl md:text-7xl leading-[1.05] tracking-tight mb-6" style={{ color: 'var(--text)' }}>
               Invest with{' '}
@@ -170,7 +170,7 @@ export default async function HomePage() {
           )}
         </section>
 
-        {/* ── Why Artha Saya ── */}
+        {/* ── Why Artha Sage ── */}
         <section className="border-t py-20" style={{ background: 'var(--surface)', borderColor: 'var(--border)' }}>
           <div className="max-w-6xl mx-auto px-5">
             <div className="text-center mb-12">

@@ -151,7 +151,7 @@ export default function SettingsClient({ initial, gmailConfigured, nextauthConfi
       {/* General */}
       <Section title="General" icon={Globe}>
         <Field label="Site Name" hint="Displayed in the browser tab and footer.">
-          <Input value={values.site_name} onChange={set('site_name')} placeholder="Artha Saya" />
+          <Input value={values.site_name} onChange={set('site_name')} placeholder="Artha Sage" />
         </Field>
         <Field label="Tagline" hint="Short description shown in hero and meta tags.">
           <Input value={values.site_tagline} onChange={set('site_tagline')} placeholder="Share market insights explained simply." />

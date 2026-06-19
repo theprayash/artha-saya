@@ -5,7 +5,7 @@ import { AlertTriangle } from 'lucide-react'
 const SECTIONS = [
   {
     title: 'Not Financial Advice',
-    body: `Everything published on Artha Saya — including articles, analyses, market commentary, data,
+    body: `Everything published on Artha Sage — including articles, analyses, market commentary, data,
     and any other content — is provided solely for general informational and educational purposes.
     Nothing on this website constitutes or should be construed as financial, investment, legal,
     tax, or accounting advice.`,
@@ -13,7 +13,7 @@ const SECTIONS = [
   {
     title: 'No Guarantee of Accuracy',
     body: `While we make every effort to ensure accuracy, we do not guarantee that any information on
-    Artha Saya is complete, accurate, up-to-date, or suitable for any particular purpose.
+    Artha Sage is complete, accurate, up-to-date, or suitable for any particular purpose.
     Do not rely on any content here for active trading decisions.`,
   },
   {
@@ -31,14 +31,14 @@ const SECTIONS = [
   },
   {
     title: 'No Liability',
-    body: `Artha Saya, its authors, editors, and affiliates shall not be held liable for any losses,
+    body: `Artha Sage, its authors, editors, and affiliates shall not be held liable for any losses,
     damages, or expenses — direct, indirect, or consequential — arising from your use of this
     website or any reliance on its content. Use of this site is entirely at your own risk.`,
   },
   {
     title: 'Changes to This Disclaimer',
     body: `We reserve the right to update or modify this disclaimer at any time without prior notice.
-    Continued use of Artha Saya after any changes constitutes your acceptance of the updated terms.`,
+    Continued use of Artha Sage after any changes constitutes your acceptance of the updated terms.`,
   },
 ]
 
@@ -62,7 +62,7 @@ export default function TermsPage() {
               Terms &amp; Disclaimer
             </h1>
             <p className="text-sm mt-3" style={{ color: 'var(--text-muted)' }}>
-              Please read carefully before using Artha Saya.
+              Please read carefully before using Artha Sage.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function TermsPage() {
           style={{ background: 'rgba(245,158,11,0.05)', border: '1px solid rgba(245,158,11,0.2)' }}
         >
           <p className="text-amber-400 font-semibold text-sm mb-1">
-            Artha Saya is an educational platform — not a registered financial advisor.
+            Artha Sage is an educational platform — not a registered financial advisor.
           </p>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             All content is for learning about the share market only. Nothing here is a recommendation
@@ -100,8 +100,8 @@ export default function TermsPage() {
         <div className="mt-16 pt-10 border-t" style={{ borderColor: 'var(--border)' }}>
           <p className="text-sm" style={{ color: 'var(--text-faint)' }}>
             Questions about this disclaimer?{' '}
-            <a href="mailto:hello@artha-saya.com.np" className="text-accent hover:underline">
-              hello@artha-saya.com.np
+            <a href="mailto:hello@artha-sage.com.np" className="text-accent hover:underline">
+              hello@artha-sage.com.np
             </a>
           </p>
         </div>

@@ -21,7 +21,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         >
           <Link href="/" className="flex items-center gap-2 font-display font-black text-base">
             <span className="text-accent">◆</span>
-            <span style={{ color: 'var(--text)' }}>Artha Saya</span>
+            <span style={{ color: 'var(--text)' }}>Artha Sage</span>
           </Link>
         </div>
 

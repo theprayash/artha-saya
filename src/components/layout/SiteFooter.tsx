@@ -17,7 +17,7 @@ export default function SiteFooter() {
           {/* Brand */}
           <div className="max-w-xs">
             <Link href="/" className="flex items-center gap-2 font-display font-black text-xl" style={{ color: 'var(--text)' }}>
-              <span className="text-accent">◆</span> Artha Saya
+              <span className="text-accent">◆</span> Artha Sage
             </Link>
             <p className="text-sm mt-3 leading-relaxed" style={{ color: 'var(--text-muted)' }}>
               Share market insights explained simply — for investors who want clarity over hype.
@@ -50,7 +50,7 @@ export default function SiteFooter() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t flex flex-col md:flex-row justify-between items-center gap-3 text-xs font-mono" style={{ borderColor: 'var(--border)', color: 'var(--text-faint)' }}>
-          <span>© {year} Artha Saya. All rights reserved.</span>
+          <span>© {year} Artha Sage. All rights reserved.</span>
           <span>Not financial advice · For educational purposes only</span>
         </div>
       </div>

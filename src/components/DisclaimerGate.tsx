@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { AlertTriangle } from 'lucide-react'
 
-const STORAGE_KEY = 'artha-saya_disclaimer_v1'
+const STORAGE_KEY = 'artha-sage_disclaimer_v1'
 
 export default function DisclaimerGate({ children }: { children: React.ReactNode }) {
   const [accepted, setAccepted] = useState<boolean | null>(null)
@@ -50,7 +50,7 @@ export default function DisclaimerGate({ children }: { children: React.ReactNode
             {/* Body */}
             <div className="space-y-3 text-sm leading-relaxed mb-8" style={{ color: 'var(--text-muted)' }}>
               <p>
-                <span className="font-semibold" style={{ color: 'var(--text)' }}>Artha Saya is for educational purposes only.</span>{' '}
+                <span className="font-semibold" style={{ color: 'var(--text)' }}>Artha Sage is for educational purposes only.</span>{' '}
                 This site does not provide financial, investment, legal, or tax advice of any kind.
               </p>
               <p>
@@ -74,7 +74,7 @@ export default function DisclaimerGate({ children }: { children: React.ReactNode
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-2">
                 <span className="text-accent font-display font-black">◆</span>
-                <span className="text-xs font-mono" style={{ color: 'var(--text-faint)' }}>Artha Saya</span>
+                <span className="text-xs font-mono" style={{ color: 'var(--text-faint)' }}>Artha Sage</span>
               </div>
               <button
                 onClick={accept}

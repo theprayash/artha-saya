@@ -83,10 +83,10 @@ export default async function BlogPostPage({ params }: Props) {
     dateModified: post.updatedAt.toISOString(),
     url: `${SITE_URL}/blog/${post.slug}`,
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.slug}` },
-    author: { '@type': 'Organization', name: 'Artha Saya', url: SITE_URL },
+    author: { '@type': 'Organization', name: 'Artha Sage', url: SITE_URL },
     publisher: {
       '@type': 'Organization',
-      name: 'Artha Saya',
+      name: 'Artha Sage',
       url: SITE_URL,
       logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
     },
@@ -152,7 +152,7 @@ export default async function BlogPostPage({ params }: Props) {
           </p>
           <p className="text-xs leading-relaxed" style={{ color: 'var(--text-muted)' }}>
             This article is for educational purposes only and does not constitute financial or investment advice.
-            Artha Saya is not registered with SEBON. Always consult a licensed Nepali financial advisor before investing.
+            Artha Sage is not registered with SEBON. Always consult a licensed Nepali financial advisor before investing.
           </p>
         </div>
       </main>

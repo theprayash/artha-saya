@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-const SITE_NAME = 'Artha Saya'
+const SITE_NAME = 'Artha Sage'
 
 function createTransport() {
   const user = process.env.GMAIL_USER

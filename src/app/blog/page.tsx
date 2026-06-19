@@ -61,7 +61,7 @@ export default async function BlogPage({ searchParams }: Props) {
         {/* Header */}
         <div className="mb-12">
           <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: 'var(--text-faint)' }}>
-            Artha Saya · नेपाल सेयर बजार
+            Artha Sage · नेपाल सेयर बजार
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl mb-4" style={{ color: 'var(--text)' }}>Blog</h1>
           <p className="text-lg max-w-xl" style={{ color: 'var(--text-muted)' }}>

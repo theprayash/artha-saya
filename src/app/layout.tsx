@@ -9,7 +9,7 @@ const bricolage = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-di
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-const SITE_NAME = 'Artha Saya'
+const SITE_NAME = 'Artha Sage'
 const SITE_DESCRIPTION = 'Share market insights explained simply — IPO analysis, stock education, mutual funds, and honest market commentary for Nepali investors. Free, always.'
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  keywords: ['share market', 'Nepal', 'NEPSE', 'IPO', 'stocks', 'mutual funds', 'investment', 'सेयर बजार', 'Artha Saya'],
+  keywords: ['share market', 'Nepal', 'NEPSE', 'IPO', 'stocks', 'mutual funds', 'investment', 'सेयर बजार', 'Artha Sage'],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   openGraph: {
