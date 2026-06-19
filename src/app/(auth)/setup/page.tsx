@@ -1,14 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Eye, EyeOff, ShieldCheck } from 'lucide-react'
 import { createFirstAdmin } from '@/lib/actions/auth'
 
 export default function SetupPage() {
-  const router = useRouter()
   const [showPw, setShowPw] = useState(false)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)

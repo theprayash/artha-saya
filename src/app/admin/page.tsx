@@ -1,6 +1,6 @@
 import { db } from '@/lib/db'
 import { posts, newsletterSubscribers, categories } from '@/lib/db/schema'
-import { eq, sql, desc } from 'drizzle-orm'
+import { sql, desc } from 'drizzle-orm'
 import Link from 'next/link'
 import { FileText, Eye, Users, Tag, TrendingUp, Plus, ArrowRight } from 'lucide-react'
 

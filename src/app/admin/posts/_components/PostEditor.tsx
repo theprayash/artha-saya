@@ -61,7 +61,7 @@ export default function PostEditor({ post, categories }: Props) {
       setPublished(publishVal)
       setSaved(true)
       setTimeout(() => setSaved(false), 2000)
-    } catch (e) {
+    } catch {
       setError('Failed to save. Try again.')
     } finally {
       setSaving(false)

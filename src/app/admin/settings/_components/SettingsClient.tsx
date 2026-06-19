@@ -167,7 +167,7 @@ export default function SettingsClient({ initial, gmailConfigured, nextauthConfi
             <p className="font-semibold" style={{ color: 'var(--text)' }}>How to set up Gmail OTP:</p>
             <ol className="space-y-2 list-decimal list-inside" style={{ color: 'var(--text-muted)' }}>
               <li>Enable <strong style={{ color: 'var(--text)' }}>2-Step Verification</strong> on your Google account at <span className="font-mono text-accent">myaccount.google.com/security</span></li>
-              <li>Go to <span className="font-mono text-accent">myaccount.google.com/apppasswords</span> and create an App Password for "Mail"</li>
+              <li>Go to <span className="font-mono text-accent">myaccount.google.com/apppasswords</span> and create an App Password for &ldquo;Mail&rdquo;</li>
               <li>Add these to your <span className="font-mono text-xs px-1.5 py-0.5 rounded" style={{ background: 'var(--bg)' }}>.env</span> file and restart Docker:</li>
             </ol>
             <pre className="text-xs font-mono rounded-lg p-3 mt-2 leading-relaxed" style={{ background: 'var(--bg)', color: '#C8A756' }}>
