@@ -2,12 +2,10 @@ import NextAuth from 'next-auth'
 import Credentials from 'next-auth/providers/credentials'
 import { authConfig } from './config'
 import { db } from '@/lib/db'
-import { adminUsers, otpTokens } from '@/lib/db/schema'
-import { eq, and, gt } from 'drizzle-orm'
+import { adminUsers } from '@/lib/db/schema'
+import { eq } from 'drizzle-orm'
 import bcrypt from 'bcryptjs'
 
-// Full auth — includes DB-dependent Credentials provider.
-// Only imported in server components and API routes, never in middleware.
 export const { handlers, auth, signIn, signOut } = NextAuth({
   ...authConfig,
   session: { strategy: 'jwt' },
@@ -16,35 +14,24 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Credentials({
       credentials: {
         email: { label: 'Email', type: 'email' },
-        otp: { label: 'One-time code', type: 'text' },
+        password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.otp) return null
+        if (!credentials?.email || !credentials?.password) return null
 
         const email = String(credentials.email).toLowerCase().trim()
-        const otp = String(credentials.otp).trim()
+        const password = String(credentials.password)
 
         const user = await db.query.adminUsers.findFirst({
           where: eq(adminUsers.email, email),
         })
-        if (!user) return null
 
-        // Find the most recent valid (unused, unexpired) token for this user
-        const token = await db.query.otpTokens.findFirst({
-          where: and(
-            eq(otpTokens.adminUserId, user.id),
-            eq(otpTokens.used, false),
-            gt(otpTokens.expiresAt, new Date()),
-          ),
-          orderBy: (t, { desc }) => [desc(t.createdAt)],
-        })
-        if (!token) return null
+        const dummyHash = '$2a$12$dummyhashtopreventtimingattacks00000000000000000000000'
+        const isValid = user
+          ? await bcrypt.compare(password, user.passwordHash)
+          : await bcrypt.compare(password, dummyHash).then(() => false)
 
-        const valid = await bcrypt.compare(otp, token.tokenHash)
-        if (!valid) return null
-
-        // Mark token as used — single use
-        await db.update(otpTokens).set({ used: true }).where(eq(otpTokens.id, token.id))
+        if (!user || !isValid) return null
 
         return { id: user.id, email: user.email, name: user.name }
       },

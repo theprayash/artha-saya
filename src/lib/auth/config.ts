@@ -13,7 +13,7 @@ export const authConfig = {
       const { pathname } = request.nextUrl
       if (pathname.startsWith('/admin')) return !!auth
       if (pathname === '/login' && !!auth) {
-        return Response.redirect(new URL('/admin/pages', request.nextUrl))
+        return Response.redirect(new URL('/admin', request.nextUrl))
       }
       return true
     },
